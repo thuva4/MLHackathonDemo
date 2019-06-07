@@ -54,14 +54,17 @@ router.post('/reviews', function(req, res, next){
               "LanguageCode": "en",
               "TextList": [ ...req.body.reviews ]
            }
-        console.log(params)
-        comprehend.batchDetectSentiment(params, function (err, data) {
+        const finalData = {
+          sentiment: [],
+          keyPhrases: []
+        }
+        let sentimet = comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
-              else     console.log(data)          
+              else return data          
             });
-        comprehend.batchDetectKeyPhrases(params, function (err, data) {
+        let keyPhrases = comprehend.batchDetectKeyPhrases(params, function (err, data) {
           if (err) res.status(400).send({ 'error': err}); 
-          else     res.send(data);           
+          else return data;           
         });
     }
 })
