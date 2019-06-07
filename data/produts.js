@@ -62,7 +62,7 @@ module.exports = {
           },
           {
             "name": " BONELESS CHICKEN BREAST ",
-            "confident": 2.5
+            "confident": 5
           },
           {
             "name": " CHEESE",
@@ -83,7 +83,7 @@ module.exports = {
         "ingredients": [
           {
             "name": "ICE CREAM",
-            "confident": 3.792079207920793
+            "confident": 5
           },
           {
             "name": " CORN SYRUP",
@@ -116,10 +116,6 @@ module.exports = {
         "ingredients": [
           {
             "name": "CREAM CHEESE",
-            "confident": 3.225806451612903
-          },
-          {
-            "name": " WHEY",
             "confident": 3.225806451612903
           },
           {
@@ -178,23 +174,22 @@ module.exports = {
             "name": "SUGAR",
             "confident": 3.2
           },
-          
           {
             "name": " SOYBEAN OIL",
             "confident": 4.4
           },
           
           {
-            "name": " BUTTER MILK (CULTURED LOWFAT MILK",
-            "confident": 7.200000000000001
+            "name": " BUTTER MILK",
+            "confident": 2
           },
           {
             "name": " SALT)",
-            "confident": 7.200000000000001
+            "confident": 2
           },
           {
             "name": " SUGAR BLUEBERRIES",
-            "confident": 7.200000000000001
+            "confident": 2
           },
           {
             "name": " CANOLA OIL",
@@ -207,11 +202,11 @@ module.exports = {
           
           {
             "name": " BUTTER",
-            "confident": 7.200000000000001
+            "confident": 3
           },
           {
             "name": " PAN OIL",
-            "confident": 7.200000000000001
+            "confident": 2
           }
         ]
       },
@@ -273,7 +268,7 @@ module.exports = {
           },
           {
             "name": " EGG",
-            "confident": 5.92063492063492
+            "confident": 4
           },
           {
             "name": " CORN SYRUP",
@@ -287,11 +282,6 @@ module.exports = {
             "name": " SALT",
             "confident": 4.66666666666663
           },
-          
-          {
-            "name": " CHOCOLATE",
-            "confident": 4.65079365079365
-          },
           {
             "name": " SKIM MILK",
             "confident": 3.190476190476186
@@ -299,14 +289,6 @@ module.exports = {
           {
             "name": " LACTOSE",
             "confident": 4.46031746031746
-          },
-          {
-            "name": " MILKFAT",
-            "confident": 4.46031746031746
-          },
-          {
-            "name": " SOY LECITHIN",
-            "confident": 4.6349206349206
           },
           {
             "name": " SUGAR",
