@@ -63,8 +63,8 @@ router.post('/reviews', async function(req, res, next){
         );
         let keyPhrases = await new Promise( (resolve, reject)=> {
           comprehend.batchDetectKeyPhrases(params, function (err, data) {
-            if (err) res.status(400).send({ 'error': err}); 
-            else return data;           
+            if (err) reject(err) 
+            else return resolve(data);           
           });
         });
         console.log({sentimet, keyPhrases})
