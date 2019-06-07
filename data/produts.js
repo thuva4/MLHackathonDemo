@@ -176,7 +176,7 @@ module.exports = {
           },
           {
             "name": " SOYBEAN OIL",
-            "confident": 4.4
+            "confident": 3
           },
           
           {
@@ -184,20 +184,16 @@ module.exports = {
             "confident": 2
           },
           {
-            "name": " SALT)",
-            "confident": 2
-          },
-          {
-            "name": " SUGAR BLUEBERRIES",
-            "confident": 2
+            "name": "BLUEBERRIES",
+            "confident": 5
           },
           {
             "name": " CANOLA OIL",
-            "confident": 2.400000000000002
+            "confident": 3
           },
           {
             "name": " WHOLE EGGS",
-            "confident": 3.400000000000002
+            "confident": 4
           },
           
           {
@@ -346,11 +342,11 @@ module.exports = {
           },
           {
             "name": " BLUEBERRIES",
-            "confident": 4.50420168067227
+            "confident": 5
           },
           {
-            "name": " BLACKBERRIES)",
-            "confident": 3.50420168067227
+            "name": " BLACKBERRIES",
+            "confident": 4.8
           },
           {
             "name": "CONCORD GRAPE JUICE",
