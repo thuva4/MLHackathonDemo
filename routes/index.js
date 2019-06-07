@@ -98,11 +98,7 @@ function generateStars(count) {
   return `<span style='color:${sysColor}; font-size: 18px;'>` + data + `</span>`
 }
 
-function generateProgreesBar(count) {
-  return `<progress value="${count}" max="40">
-  </progress>`
 
-}
 
 router.post('/reviews', async (req, res, next) => {
   const { emailAddress, companyName } = req.body;
@@ -190,7 +186,7 @@ router.post('/reviews', async (req, res, next) => {
                       let productData = `<h3> <b>Product Name</b> : ${product.name} </h3> 
                     <ul> 
                       <li> <b>Rating</b> : ${generateStars(Number(product.rating).toFixed(2))}</li>
-                      <li> <b>Hot selling count</b> : ${generateProgreesBar(product.counts)} </li>
+                      <li> <b>Hot selling count</b> : ${product.counts} </li>
                       <li> <b>Ingredients</b> </li>
                       <ul> 
                          {{INCREDIENTDATA}}
