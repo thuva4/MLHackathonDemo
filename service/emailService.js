@@ -112,7 +112,7 @@ async function sendEmail(toAddresses, htmlBody) {
       ReplyToAddresses: fromAddress
     };
   
-    return new Promise(resolve, reject => {
+    return new Promise((resolve, reject) => {
       ses.sendEmail(emailParams, (err, data) => {
         if (err) {
           console.error(
