@@ -9,7 +9,17 @@ const { sendEmail } = require('../service/emailService')
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
-const reviweFileNames = ["negative", "positive"]
+const reviweFileNames = [
+  "positive5",
+"positive10",
+"positive20",
+"neutral5",
+"neutral10",
+"neutral20",
+"negative5",
+"negative10",
+"negative20"
+]
 const productsNames = [
   'SPICY CHICKEN PIZZA',
 'BBQ CHICKEN PIZZA',
@@ -59,7 +69,7 @@ router.get('/products', function(req, res, next){
 
 router.get('/reviews', function(req, res, next){
   res.send({
-    'fileList': ['file1', 'file2', 'file3']
+    'fileList': reviweFileNames
   });
 });
 

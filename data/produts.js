@@ -8,10 +8,6 @@ module.exports = {
             "confident": 1.7857142857142856
           },
           {
-            "name": " WATER",
-            "confident": 3.142857142857142
-          },
-          {
             "name": "PALM OIL",
             "confident": 1.7857142857142856
           },
@@ -177,10 +173,6 @@ module.exports = {
           {
             "name": " EGGS",
             "confident": 3.4
-          },
-          {
-            "name": " WATER",
-            "confident": 4.60000000000001
           },
           {
             "name": "SUGAR",
