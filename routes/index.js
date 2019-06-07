@@ -58,16 +58,16 @@ router.post('/reviews', function(req, res, next){
           sentiment: [],
           keyPhrases: []
         }
-        let sentimet = comprehend.batchDetectSentiment(params, function (err, data) {
+        let sentimet = await comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
               else return data          
             });
-        let keyPhrases = comprehend.batchDetectKeyPhrases(params, function (err, data) {
+        let keyPhrases = await comprehend.batchDetectKeyPhrases(params, function (err, data) {
           if (err) res.status(400).send({ 'error': err}); 
           else return data;           
         });
-        console.log(keyPhrases)
-        console.log(sentimet)
+        console.log(keyPhrases.json())
+        console.log(sentimet.json())
         res.send(finalData)
     }
 })
