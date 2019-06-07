@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var AWS = require('aws-sdk');
+const axios = require('axios');
 
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
