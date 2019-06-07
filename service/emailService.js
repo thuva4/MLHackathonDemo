@@ -5,7 +5,7 @@ AWS.config.update({region: 'us-east-1', });
 const fromAddress = 'suthagar.14@cse.mrt.ac.lk'
 const reportTemplateName = 'SampleTemplate_1'
 
-async function createEmailTemplate(emailTemplate) {  
+async function createEmailTemplate() {  
     // Sample Email Template
     const params = {
       "Template": {
@@ -17,7 +17,7 @@ async function createEmailTemplate(emailTemplate) {
     }
   
     return new Promise(resolve, reject => {
-      ses.createTemplate(emailTemplate, (err, data) => {
+      ses.createTemplate(params, (err, data) => {
         if (err) {
           console.error(
             `CreateEmailTemplate: Email Template creation error : ${err}`
