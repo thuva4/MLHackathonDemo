@@ -126,11 +126,13 @@ router.post('/reviews', async (req, res, next) => {
                             });
                             const maxLe = Math.min(5, inputProductsIngredient.ingredients.length)
                             productDetail.ingredientsSort = inputProductsIngredient.ingredients.slice(0,maxLe)
+                            console.log(productDetail)
                           }
                         }
                         productDetails.push(productDetail)
                    
                       }
+
                     console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
                   }
                   i++;
