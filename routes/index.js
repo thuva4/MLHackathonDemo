@@ -158,7 +158,7 @@ router.post('/reviews', async (req, res, next) => {
                     productDetails.forEach(product => {
                       let productData = `<h3> <b>Product Name</b> : ${product.name} </h3> 
                     <ul> 
-                      <li> <b>Rating</b> : ${Math.round(product.rating,2)}</li>
+                      <li> <b>Rating</b> : ${product.rating}</li>
                       <li> <b>Hot selling count</b> : ${product.counts} </li>
                       <li> <b>Ingredients</b> </li>
                       <ul> 
