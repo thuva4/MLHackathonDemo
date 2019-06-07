@@ -55,10 +55,16 @@ router.post('/reviews', function(req, res, next){
               "TextList": [ ...req.body.reviews ]
            }
         console.log(params)
+        const response = {}
         comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
-              else     res.send(data);           
+              else     response.sentiment = data          
             });
+        comprehend.DetectKeyPhrases(params, function (err, data) {
+          if (err) res.status(400).send({ 'error': err}); 
+          else     response.keyPhrases = data          
+        });
+        res.send(response)
     }
 })
 });
