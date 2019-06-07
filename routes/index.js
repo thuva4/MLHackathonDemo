@@ -84,8 +84,8 @@ router.post('/reviews', async (req, res, next) => {
                   responseJson[productsNames[reviewDetails.productId]] = {sentimet}
                   console.log(i, length)
                   if(i==length-1){
-                    const conmpanyRating = 0
-                    const overallCount = 0
+                    let conmpanyRating = 0
+                    let overallCount = 0
                     const productDetails  = []
                     for (const reviewDetailsInner of req.body.info) {
                         const sentiments = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList[0]
