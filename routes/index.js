@@ -91,8 +91,8 @@ router.post('/reviews', async (req, res, next) => {
                         const sentiments = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList[0]
                         const productRating = (10 * sentiments.SentimentScore.Positive + 5 * sentiments.SentimentScore.Neutral + 5 * sentiments.SentimentScore.Mixed)/20
                         const productCount = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList.length
-                        conmpanyRating += productCount
-                        overallCount += 1
+                        conmpanyRating += productRating
+                        overallCount += productCount
                         const productDetail = {
                           rating: productRating,
                           counts: productCount
