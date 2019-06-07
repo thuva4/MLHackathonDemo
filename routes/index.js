@@ -54,10 +54,6 @@ router.post('/reviews', async function(req, res, next){
               "LanguageCode": "en",
               "TextList": [ ...req.body.reviews ]
            }
-        const finalData = {
-          sentiment: [],
-          keyPhrases: []
-        }
         let sentimet = await new Promise( (resolve, reject)=> {
           comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) reject(err)
@@ -65,13 +61,13 @@ router.post('/reviews', async function(req, res, next){
             });
           }
         );
-        let keyPhrases = await comprehend.batchDetectKeyPhrases(params, function (err, data) {
-          if (err) res.status(400).send({ 'error': err}); 
-          else return data;           
+        let keyPhrases = await new Promise( (resolve, reject)=> {
+          comprehend.batchDetectKeyPhrases(params, function (err, data) {
+            if (err) res.status(400).send({ 'error': err}); 
+            else return data;           
+          });
         });
-        // console.log(keyPhrases)
-        console.log(sentimet)
-        res.send(finalData)
+        res.send({sentimet, keyPhrases})
     }
 })
 });
