@@ -1,13 +1,1093 @@
 {
     "products": [
-        {
-            "name": "SPICY CHICKEN PIZZA",
-            "ingredients" : [
-                {
-                    "name": "",
-                    "confidence": 10
-                }
-            ]
-        }
+      {
+        "name": "SPICY CHICKEN PIZZA",
+        "ingredients": [
+          {
+            "name": "WHEAT FLOUR",
+            "confident": 1.7857142857142856
+          },
+          {
+            "name": " WATER",
+            "confident": 7.142857142857142
+          },
+          {
+            "name": "PALM OIL",
+            "confident": 1.7857142857142856
+          },
+          {
+            "name": "SUGAR",
+            "confident": 3.571428571428571
+          },
+          {
+            "name": " SALT",
+            "confident": 12.5
+          },
+          {
+            "name": " YEAST",
+            "confident": 1.7857142857142856
+          },
+          {
+            "name": " GARLIC",
+            "confident": 3.571428571428571
+          },
+          {
+            "name": "CHICKEN BREAST",
+            "confident": 10.7857142857142856
+          },
+          {
+            "name": " SPICE",
+            "confident": 3.571428571428571
+          },
+          {
+            "name": " CHEESE",
+            "confident": 1.7857142857142856
+          }
+        ]
+      },
+      {
+        "name": "BBQ CHICKEN PIZZA",
+        "ingredients": [
+          {
+            "name": "SOFT WHEAT FLOUR",
+            "confident": 2.5
+          },
+          {
+            "name": " SUNFLOWER OIL",
+            "confident": 2.5
+          },
+          {
+            "name": " SALT",
+            "confident": 47.5
+          },
+          {
+            "name": " YEAST",
+            "confident": 2.5
+          },
+          {
+            "name": " BONELESS CHICKEN BREAST ",
+            "confident": 2.5
+          },
+          {
+            "name": " CHEESE",
+            "confident": 22.499999999999996
+          },
+          {
+            "name": " BBQ SAUCE",
+            "confident": 5
+          },
+          {
+            "name": " TOMATO PASTE",
+            "confident": 5
+          }
+        ]
+      },
+      {
+        "name": "ICE CREAM SANDWICHES",
+        "ingredients": [
+          {
+            "name": "ICE CREAM",
+            "confident": 20.792079207920793
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 3638.6138613861385
+          },
+          {
+            "name": " SUGAR",
+            "confident": 5260.39603960396
+          },
+          {
+            "name": " HIGH FRUCTOSE CORN SYRUP",
+            "confident": 3118.811881188119
+          },
+          {
+            "name": " CREAM",
+            "confident": 935.6435643564357
+          },
+          {
+            "name": " COCOA",
+            "confident": 956.4356435643564
+          },
+          {
+            "name": " EGGS",
+            "confident": 20.792079207920793
+          }
+        ]
+      },
+      {
+        "name": "PUMPKIN CHEESECAKE",
+        "ingredients": [
+          {
+            "name": "CREAM CHEESE",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " WHEY",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " SALT",
+            "confident": 12.903225806451612
+          },
+          
+          {
+            "name": " SUGAR",
+            "confident": 6.451612903225806
+          },
+          {
+            "name": " EGGS",
+            "confident": 3.225806451612903
+          },
+          
+          {
+            "name": " RICE FLOUR",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " TAPIOCA FLOUR",
+            "confident": 3.225806451612903
+          },
+          
+          {
+            "name": " BROWN SUGAR",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " PECANS",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " GINGER POWDER",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " VANILLA",
+            "confident": 3.225806451612903
+          },
+          {
+            "name": " CINNAMON POWDER",
+            "confident": 3.225806451612903
+          }
+        ]
+      },
+      {
+        "name": "BLUEBERRY MUFFINS",
+        "ingredients": [
+          {
+            "name": " EGGS",
+            "confident": 50.4
+          },
+          {
+            "name": " WATER",
+            "confident": 57.60000000000001
+          },
+          {
+            "name": "SUGAR",
+            "confident": 43.2
+          },
+          
+          {
+            "name": " SOYBEAN OIL",
+            "confident": 50.4
+          },
+          
+          {
+            "name": " BUTTER MILK (CULTURED LOWFAT MILK",
+            "confident": 7.200000000000001
+          },
+          {
+            "name": " SALT)",
+            "confident": 7.200000000000001
+          },
+          {
+            "name": " SUGAR BLUEBERRIES",
+            "confident": 7.200000000000001
+          },
+          {
+            "name": " CANOLA OIL",
+            "confident": 14.400000000000002
+          },
+          {
+            "name": " WHOLE EGGS",
+            "confident": 14.400000000000002
+          },
+          
+          {
+            "name": " BUTTER",
+            "confident": 7.200000000000001
+          },
+          {
+            "name": " PAN OIL",
+            "confident": 7.200000000000001
+          }
+        ]
+      },
+      {
+        "name": "MILK CHOCOLATE FLAKES",
+        "ingredients": [
+          {
+            "name": "SUGAR",
+            "confident": 36.36363636363637
+          },
+          {
+            "name": " COCOA FAT",
+            "confident": 36.36363636363637
+          },
+          {
+            "name": " COCOA BUTTER",
+            "confident": 36.36363636363637
+          },
+          {
+            "name": " SKIMMED MILK POWDER",
+            "confident": 36.36363636363637
+          },
+          {
+            "name": " LACTOSE",
+            "confident": 36.36363636363637
+          }
+        ]
+      },
+      {
+        "name": "BROWNIES",
+        "ingredients": [
+          {
+            "name": "SUGAR",
+            "confident": 130.95238095238096
+          },
+          {
+            "name": " CHOCOLATE",
+            "confident": 69.84126984126983
+          },
+          {
+            "name": " CHOCOLATE LIQUOR",
+            "confident": 96.03174603174602
+          },
+          {
+            "name": " COCOA BUTTER",
+            "confident": 165.87301587301587
+          },
+          {
+            "name": " SOYBEAN LECITHIN",
+            "confident": 87.3015873015873
+          },
+          {
+            "name": " VANILLA EXTRACT",
+            "confident": 96.03174603174602
+          },
+          {
+            "name": " ENRICHED WHEAT FLOUR",
+            "confident": 17.46031746031746
+          },
+          {
+            "name": " EGG",
+            "confident": 34.92063492063492
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 235.71428571428572
+          },
+          {
+            "name": " COCOA POWDER",
+            "confident": 78.57142857142857
+          },
+          {
+            "name": " SALT",
+            "confident": 366.66666666666663
+          },
+          
+          {
+            "name": " CHOCOLATE",
+            "confident": 43.65079365079365
+          },
+          {
+            "name": " SKIM MILK",
+            "confident": 26.190476190476186
+          },
+          {
+            "name": " LACTOSE",
+            "confident": 17.46031746031746
+          },
+          {
+            "name": " MILKFAT",
+            "confident": 17.46031746031746
+          },
+          {
+            "name": " SOY LECITHIN",
+            "confident": 270.6349206349206
+          },
+          {
+            "name": " SUGAR",
+            "confident": 165.87301587301587
+          },
+          
+          {
+            "name": " SOYBEAN OIL",
+            "confident": 209.5238095238095
+          },
+          {
+            "name": " PALM OIL",
+            "confident": 96.03174603174602
+          },
+          {
+            "name": " COCOA",
+            "confident": 61.11111111111111
+          },
+          {
+            "name": " PEANUT FLOUR.",
+            "confident": 8.73015873015873
+          }
+        ]
+      },
+      {
+        "name": "JELLY",
+        "ingredients": [
+          {
+            "name": "CONCORD GRAPES",
+            "confident": 665.546218487395
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 2843.6974789915967
+          },
+          {
+            "name": " HIGH FRUCTOSE CORN SYRUP",
+            "confident": 2601.6806722689075
+          },
+          {
+            "name": " CITRIC ACID",
+            "confident": 2299.159663865546
+          },
+          {
+            "name": " SODIUM CITRATE.",
+            "confident": 1512.6050420168067
+          },
+          {
+            "name": "GRAPE JUICE",
+            "confident": 363.02521008403363
+          },
+          {
+            "name": " SUGAR",
+            "confident": 907.563025210084
+          },
+          {
+            "name": " BLUEBERRIES",
+            "confident": 60.50420168067227
+          },
+          {
+            "name": " BLACKBERRIES)",
+            "confident": 60.50420168067227
+          },
+          {
+            "name": "CONCORD GRAPE JUICE",
+            "confident": 544.5378151260503
+          }
+        ]
+      },
+      {
+        "name": "HONEY HAM",
+        "ingredients": [
+          {
+            "name": " HONEY",
+            "confident": 859.5238095238095
+          },
+          {
+            "name": " SALT",
+            "confident": 633.3333333333333
+          },
+          {
+            "name": " SUGAR",
+            "confident": 271.4285714285714
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 45.238095238095234
+          }
+        ]
+      },
+      {
+        "name": "TURKEY",
+        "ingredients": [
+          {
+            "name": "TURKEY",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " TURKEY BROTH",
+            "confident": 9.859154929577466
+          },
+          {
+            "name": " CHILI POWDER (CHILI PEPPERS",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " CORN FLOUR",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " OATMEAL",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " TOMATOES",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " SUGAR",
+            "confident": 29.577464788732392
+          },
+          {
+            "name": " SALT",
+            "confident": 54.22535211267605
+          },
+          {
+            "name": " SOY",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " HONEY",
+            "confident": 14.788732394366196
+          },
+          {
+            "name": " ONION POWDER",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " GARLIC POWDER",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " CHIPOTLE PEPPER",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " ORANGE PEEL",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " YEAST EXTRACT",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " CHICKEN FAT",
+            "confident": 4.929577464788733
+          },
+          {
+            "name": " FLAVOR).",
+            "confident": 4.929577464788733
+          }
+        ]
+      },
+      {
+        "name": "BEEF PATTIES",
+        "ingredients": [
+          {
+            "name": "BEEF",
+            "confident": 658.282208588957
+          },
+          {
+            "name": " BEEF HEARTS",
+            "confident": 249.6932515337423
+          },
+          {
+            "name": " TEXTURED SOY FLOUR",
+            "confident": 181.59509202453987
+          },
+          {
+            "name": " SALT",
+            "confident": 907.9754601226992
+          },
+          {
+            "name": " SPICES",
+            "confident": 204.2944785276074
+          },
+          {
+            "name": " ONION",
+            "confident": 22.699386503067483
+          },
+          {
+            "name": " VIDALIA ONION",
+            "confident": 90.79754601226993
+          },
+          {
+            "name": " ONION POWDER",
+            "confident": 181.59509202453987
+          },
+          {
+            "name": " EGG",
+            "confident": 25.852782764811487
+          },
+          {
+            "name": " WHOLE WHEAT GRAHAM FLOUR",
+            "confident": 25.852782764811487
+          },
+          {
+            "name": " RASPBERRY PUREE",
+            "confident": 51.70556552962297
+          },
+          {
+            "name": " PALM OIL",
+            "confident": 129.26391382405745
+          },
+          {
+            "name": " HONEY",
+            "confident": 206.8222621184919
+          },
+          {
+            "name": " DICED ROASTED PISTACHIOS",
+            "confident": 25.852782764811487
+          },
+          {
+            "name": " PISTACHIO PASTE",
+            "confident": 51.70556552962297
+          },
+          {
+            "name": " SUNFLOWER OIL",
+            "confident": 51.70556552962297
+          },
+          {
+            "name": " ALMOND PASTE",
+            "confident": 25.852782764811487
+          },
+          {
+            "name": " SKIM MILK",
+            "confident": 336.08617594254935
+          },
+          {
+            "name": " SOYBEAN OIL",
+            "confident": 206.8222621184919
+          },
+          {
+            "name": " COCONUT OIL",
+            "confident": 1551.1669658886892
+          },
+          {
+            "name": " VANILLA",
+            "confident": 310.2333931777379
+          },
+          {
+            "name": " MILK)",
+            "confident": 51.70556552962297
+          },
+          {
+            "name": " PEPPERMINT OIL",
+            "confident": 25.852782764811487
+          }
+        ]
+      },
+      {
+        "name": "PORK RUB",
+        "ingredients": [
+          {
+            "name": "BROWN SUGAR",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " FLAKE SALT",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " GROUND ANCHO CHILI PEPPER",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " CORIANDER",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " SMOKED PAPRIKA",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " BLACK PEPPER",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " CUMIN",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " CAYENNE PEPPER.",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": "GARLIC",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " ONION",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " SALT",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " BROWN SUGAR",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " SPICES",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " SUGAR",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " PARSLEY",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " SILICON DIOXIDE (TO PREVENT CAKING)",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " CANOLA OIL",
+            "confident": 11.11111111111111
+          },
+          {
+            "name": " CITRIC ACID.",
+            "confident": 11.11111111111111
+          }
+        ]
+      },
+      {
+        "name": "BROCCOLI CUTS",
+        "ingredients": [
+          {
+            "name": "BROCCOLI.",
+            "confident": 28000
+          },
+          {
+            "name": "ORGANIC BROCCOLI.",
+            "confident": 875
+          },
+          {
+            "name": "",
+            "confident": 875
+          },
+          {
+            "name": "BROCCOLI CUTS.",
+            "confident": 875
+          }
+        ]
+      },
+      {
+        "name": "SHERBET",
+        "ingredients": [
+          {
+            "name": "MILKFAT AND NONFAT MILK",
+            "confident": 73.51778656126481
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 1715.415019762846
+          },
+          {
+            "name": " HIGH FRUCTOSE CORN SYRUP",
+            "confident": 465.6126482213439
+          },
+          {
+            "name": " WHEY",
+            "confident": 735.1778656126481
+          },
+          {
+            "name": " BUTTERMILK",
+            "confident": 147.03557312252963
+          },
+          {
+            "name": " SUGAR SYRUP",
+            "confident": 49.011857707509876
+          },
+          {
+            "name": " LOCUST BEAN GUM AND CARRAGEENAN.",
+            "confident": 24.505928853754938
+          },
+          {
+            "name": "WATER",
+            "confident": 1102.7667984189723
+          },
+          {
+            "name": " SUGAR",
+            "confident": 1666.403162055336
+          },
+          {
+            "name": " NONFAT MILK",
+            "confident": 784.189723320158
+          },
+          {
+            "name": " CREAM",
+            "confident": 931.2252964426877
+          },
+          {
+            "name": " LIME",
+            "confident": 24.505928853754938
+          },
+          {
+            "name": " ORANGE",
+            "confident": 24.505928853754938
+          },
+          {
+            "name": " SALT",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " BUTTER",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " GELATIN",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " LEMON JUICE CONCENTRATE",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " LEMON OIL",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " LEMON PEEL",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " PEPPER",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " YEAST EXTRACT.",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": "SHRIMP",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " VEGETABLE OIL",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " DISTILLED VINEGAR",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " PASTEURIZED EGG",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " PICKLED RED CHILI",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " GARLIC",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " ONION",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " BAKING SODA",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " VINEGAR)",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": "SOYBEAN OIL (PROCESSING AID)",
+            "confident": 30.32258064516129
+          },
+          {
+            "name": " YEAST EXTRACT",
+            "confident": 30.32258064516129
+          }
+        ]
+      },
+      {
+        "name": "COOKIE",
+        "ingredients": [
+          {
+            "name": " NON-DAIRY COCOA BUTTER",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " BROWN SUGAR",
+            "confident": 45.45454545454545
+          },
+          {
+            "name": " PALM FRUIT OIL",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": " TAPIOCA SYRUP",
+            "confident": 37.878787878787875
+          },
+          {
+            "name": " FILTERED WATER",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " VANILLA EXTRACT",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": " SALT.",
+            "confident": 30.303030303030305
+          },
+          {
+            "name": " ABSORBIC ACID",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " ENRICHMENTS)",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " UNSALTED BUTTER (CREAM)",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " SEMISWEET CHOCOLATE CHIPS (SUGAR",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " DEXTROSE)",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " EVAPORATED CANE SUGAR",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " FRESH WHOLE EGG",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " MACA POWDER",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " PURE VANILLA EXTRACT",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " SEA SALT",
+            "confident": 60.60606060606061
+          },
+          {
+            "name": "UNBLEACHED WHEAT FLOUR",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " BUTTER (CREAM",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " SALT)",
+            "confident": 37.878787878787875
+          },
+          {
+            "name": " TOFFEE (MILK CHOCOLATE [SUGAR",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " COCOA BUTTER CHOCOLATE",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " NONFAT MILK",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": " MILK FAT",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " LACTOSE",
+            "confident": 30.303030303030305
+          },
+          {
+            "name": " SALT]",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " BUTTER SOYBEAN OIL",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": "WHEAT FLOUR",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " CHOCOLATE",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": " UNSALTED BUTTER (CREAM",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " MILK SOLIDS)",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " WHOLE EGGS",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " BAKING POWDER (SODIUM ACID PYROPHOSPHATE",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " SODIUM BICARBONATE",
+            "confident": 30.303030303030305
+          },
+          {
+            "name": " CORNSTARCH",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": "CHOCOLATE",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " COCOA POWDER",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": "MILK CHOCOLATE (SUGAR",
+            "confident": 15.151515151515152
+          },
+          {
+            "name": " SKIM MILK",
+            "confident": 22.727272727272727
+          },
+          {
+            "name": " COCONUT",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " PEANUT BUTTER",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " GRASS-FED BUTTER",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " SARDINE",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " TILAPIA)",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " CANE SYRUP",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " PEANUT FLOUR",
+            "confident": 7.575757575757576
+          },
+          {
+            "name": " ALMOND BUTTER",
+            "confident": 7.575757575757576
+          }
+        ]
+      },
+      {
+        "name": "COFFEE",
+        "ingredients": [
+          {
+            "name": "CREAM",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " SKIM MILK",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " EGG YOLKS",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " COFFEE POWDER",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " VANILLA",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " SALT.",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": "COFFEE.",
+            "confident": 12.631578947368421
+          },
+          {
+            "name": " COCOA",
+            "confident": 12.631578947368421
+          }
+        ]
+      },
+      {
+        "name": "CUPCAKES",
+        "ingredients": [
+          {
+            "name": "ICING SUGAR",
+            "confident": 134.6153846153846
+          },
+          {
+            "name": " SUGAR",
+            "confident": 163.46153846153848
+          },
+          {
+            "name": " PALM OIL",
+            "confident": 144.2307692307692
+          },
+          {
+            "name": " CORN SYRUP",
+            "confident": 211.53846153846155
+          },
+          {
+            "name": " EGGS",
+            "confident": 221.15384615384616
+          },
+          {
+            "name": " WHOLE EGGS",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": " STRAWBERRIES",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": "SUGAR",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": " MILK FAT",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": " SKIM MILK",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": "CAKE SUGAR",
+            "confident": 9.615384615384617
+          },
+          {
+            "name": " COCOA",
+            "confident": 9.615384615384617
+          }
+        ]
+      }
     ]
-}
+  }

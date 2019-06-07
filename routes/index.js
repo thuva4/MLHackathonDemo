@@ -6,6 +6,9 @@ const fs = require('fs');
 const inputProducts = require('../data/inputProducts').products
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
+
+const reviweFileNames = ["negative", "positive"]
+const productsNames = ["Burger", "Cheese"]
 router.get('/', async function(req, res, next) {
   let roleArn =await axios.get("http://169.254.169.254/latest/meta-data/iam/info")	    
   .then(response => response.data)	     
@@ -40,6 +43,7 @@ router.get('/reviews', function(req, res, next){
 });
 
 router.post('/reviews', async function(req, res, next){
+  const responseJson = {}
   fs.readFile('./credencials.json', async function(err, data){
     if (err) res.status(500).send(err)
     else {
@@ -48,26 +52,32 @@ router.post('/reviews', async function(req, res, next){
             data.Credentials.SecretAccessKey, 
             data.Credentials.SessionToken)
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
-        // for (const reviewDetails of req.body.info) 
-        const params = {
-              "LanguageCode": "en",
-              "TextList": [ ...req.body.reviews ]
-           }
-        let sentimet = await new Promise( (resolve, reject)=> {
-          comprehend.batchDetectSentiment(params, function (err, data) {
-              if (err) reject(err)
-              else return resolve(data)          
+        for (const reviewDetails of req.body.info) {
+          fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
+            if (err) res.status(500).send(err)
+            else {
+                const params = {
+                  "LanguageCode": "en",
+                  "TextList": [ ...reviews.reviews ]
+                }
+                let sentimet = await new Promise( (resolve, reject)=> {
+                  comprehend.batchDetectSentiment(params, function (err, data) {
+                      if (err) reject(err)
+                      else return resolve(data)          
+                    });
+                  }
+                );
+                let keyPhrases = await new Promise( (resolve, reject)=> {
+                  comprehend.batchDetectKeyPhrases(params, function (err, data) {
+                    if (err) reject(err) 
+                    else return resolve(data);           
+                  });
+                });
+                responseJson[productsNames[reviewDetails.productId]] = {sentimet, keyPhrases}
+              }
             });
-          }
-        );
-        let keyPhrases = await new Promise( (resolve, reject)=> {
-          comprehend.batchDetectKeyPhrases(params, function (err, data) {
-            if (err) reject(err) 
-            else return resolve(data);           
-          });
-        });
-        console.log({sentimet, keyPhrases})
-        res.send({sentimet, keyPhrases})
+        }
+        res.send(responseJson)
     }
 })
 });
