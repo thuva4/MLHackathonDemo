@@ -264,7 +264,7 @@ module.exports = {
           },
           {
             "name": " ENRICHED WHEAT FLOUR",
-            "confident": 5.46031746031746
+            "confident": 4.46031746031746
           },
           {
             "name": " EGG",
