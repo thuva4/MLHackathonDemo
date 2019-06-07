@@ -82,14 +82,14 @@ router.post('/reviews', async (req, res, next) => {
                     });
                   });
                   responseJson[productsNames[reviewDetails.productId]] = {sentimet, keyPhrases}
+                  console.log(i, length)
+                  if(i==length-1){
+                    console.log(responseJson)
+                  }
+                  i++;
                   
                 }
               });
-              console.log(i, length)
-          if(i==length-1){
-            console.log(responseJson)
-          }
-          i++;
         }
       
     }
