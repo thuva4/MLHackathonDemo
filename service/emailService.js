@@ -107,6 +107,10 @@ async function sendEmail(toAddresses, htmlBody) {
                 ToAddresses: [toAddresses]
             },
             Message: {
+              Subject: {
+                Charset: 'UTF-8',
+                Data: 'WeAreHereForHoodies: Your results are ready!!'
+              },
                 Body: {
                 Html: {
                     Charset: 'UTF-8',
@@ -117,10 +121,6 @@ async function sendEmail(toAddresses, htmlBody) {
                     Data: 'No text data'
                 }
                 }
-            },
-            Subject: {
-                Charset: 'UTF-8',
-                Data: 'WeAreHereForHoodies: Your results are ready!!'
             },
             Source: fromAddress,
             ReplyToAddresses: [fromAddress]
