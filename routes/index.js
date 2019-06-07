@@ -66,6 +66,9 @@ router.post('/reviews', function(req, res, next){
           if (err) res.status(400).send({ 'error': err}); 
           else return data;           
         });
+        console.log(keyPhrases)
+        console.log(sentimet)
+        res.send(finalData)
     }
 })
 });
