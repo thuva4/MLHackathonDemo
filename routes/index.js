@@ -58,7 +58,6 @@ router.post('/reviews', async (req, res, next) => {
         const length = req.body.info.length
         let i = 0
         for (const reviewDetails of req.body.info) {
-          await new Promise( async (resove) => {
             await fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
               if (err) console.log(err)
               else {
@@ -86,8 +85,7 @@ router.post('/reviews', async (req, res, next) => {
                   
                 }
               });
-              resove();
-          });
+              console.log(i, length)
           if(i==length-1){
             console.log(responseJson)
           }
