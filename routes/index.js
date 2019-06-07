@@ -60,6 +60,7 @@ router.post('/reviews', async function(req, res, next){
                   "LanguageCode": "en",
                   "TextList": [ ...reviews.reviews ]
                 }
+                console.log(params)
                 let sentimet = await new Promise( (resolve, reject)=> {
                   comprehend.batchDetectSentiment(params, function (err, data) {
                       if (err) reject(err)
