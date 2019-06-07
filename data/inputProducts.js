@@ -18,7 +18,6 @@ module.exports = {
         {
             "name": "MILK CHOCOLATE FLAKES"
         },
-
         {
             "name": "BROWNIES"
         },
