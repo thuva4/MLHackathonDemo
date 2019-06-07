@@ -170,7 +170,7 @@ router.post('/reviews', async (req, res, next) => {
                         incredientData += ` <li> Name: ${incredient.name}</li>
                         <li> Importance: ${incredient.confident} </li>`
                       })
-                      productData = prodyctData.replace(`{{INCREDIENTDATA}}`, incredientData)
+                      productData = productData.replace(`{{INCREDIENTDATA}}`, incredientData)
 
                       productsInfo += productData
                     });
