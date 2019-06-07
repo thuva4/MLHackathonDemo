@@ -87,44 +87,59 @@ async function sendReportEmail(toAddresses) {
 }
 
 async function sendEmail(toAddresses, htmlBody) {
-    const emailParams = {
-      Destination: {
-        CcAddresses: [],
-        ToAddresses: toAddresses
-      },
-      Message: {
-        Body: {
-          Html: {
-            Charset: 'UTF-8',
-            Data: htmlBody
-          },
-          Text: {
-            Charset: 'UTF-8',
-            Data: 'No text data'
-          }
-        }
-      },
-      Subject: {
-        Charset: 'UTF-8',
-        Data: 'WeAreHereForHoodies: Your results are ready!!'
-      },
-      Source: fromAddress,
-      ReplyToAddresses: fromAddress
-    };
-  
-    return new Promise((resolve, reject) => {
-      ses.sendEmail(emailParams, (err, data) => {
+    fs.readFile('./credencials.json', async function(err, data){
         if (err) {
-          console.error(
-            `sendEmail: Email dispatch failed for emailAddress ${toAddresses}. Error ${JSON.stringify(
-              err
-            )}`
-          );
-          return reject(err);
+            console.log("sendReportEmail: err : ", err)
+            return err
         }
-        console.info(`sendEmail: Email sent to ${toAddresses} - `, data);
-        return resolve('email sent');
-      });
+        else {
+            data = JSON.parse(data)
+            let tempCredentials = new AWS.Credentials(data.Credentials.AccessKeyId, 
+                data.Credentials.SecretAccessKey, 
+                data.Credentials.SessionToken)
+
+            const ses = new AWS.SES({apiVersion: '2017-11-27', credentials:tempCredentials});
+            
+            const emailParams = {
+            Destination: {
+                CcAddresses: [],
+                ToAddresses: toAddresses
+            },
+            Message: {
+                Body: {
+                Html: {
+                    Charset: 'UTF-8',
+                    Data: htmlBody
+                },
+                Text: {
+                    Charset: 'UTF-8',
+                    Data: 'No text data'
+                }
+                }
+            },
+            Subject: {
+                Charset: 'UTF-8',
+                Data: 'WeAreHereForHoodies: Your results are ready!!'
+            },
+            Source: fromAddress,
+            ReplyToAddresses: fromAddress
+            };
+        
+            return new Promise((resolve, reject) => {
+            ses.sendEmail(emailParams, (err, data) => {
+                if (err) {
+                console.error(
+                    `sendEmail: Email dispatch failed for emailAddress ${toAddresses}. Error ${JSON.stringify(
+                    err
+                    )}`
+                );
+                return reject(err);
+                }
+                console.info(`sendEmail: Email sent to ${toAddresses} - `, data);
+                return resolve('email sent');
+            });
+            });
+        }
     });
   }
 
