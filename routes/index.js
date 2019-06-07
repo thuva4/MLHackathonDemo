@@ -206,7 +206,7 @@ router.post('/reviews', async (req, res, next) => {
                     htmlDATA += productsInfo
 
                     // await sendEmail('suthagar.14@cse.mrt.ac.lk', JSON.stringify({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}))
-                    await sendEmail(emailAddress, htmlDATA)
+                    await sendEmail(emailAddress, htmlDATA, companyName)
                   }
                   i++;
                   

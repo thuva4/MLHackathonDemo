@@ -87,7 +87,7 @@ async function sendReportEmail(toAddresses) {
     })
 }
 
-async function sendEmail(toAddresses, htmlBody) {
+async function sendEmail(toAddresses, htmlBody, companyName = '') {
     fs.readFile('./credencials.json', async function(err, data){
         if (err) {
             console.log("sendReportEmail: err : ", err)
@@ -109,7 +109,7 @@ async function sendEmail(toAddresses, htmlBody) {
             Message: {
               Subject: {
                 Charset: 'UTF-8',
-                Data: 'WeAreHereForHoodies: Your results are ready!!'
+                Data:  'Your results are ready for ' + companyName
               },
                 Body: {
                 Html: {
