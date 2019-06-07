@@ -176,7 +176,7 @@ router.post('/reviews', async (req, res, next) => {
                     // const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
 
                     let htmlDATA = `<h1> <b>Company Name </b> : ${companyName} </h1> 
-                        <h2><b> Company Ratings</b> : ${Number(conmpanyRating).toFixed(2)} </h2> `
+                        <h2><b> Company Ratings</b> : ${generateStars(Number(conmpanyRating).toFixed(2))} </h2> `
                     
                     let productsInfo = ''
                     console.log(productDetails)
