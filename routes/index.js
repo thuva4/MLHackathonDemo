@@ -51,7 +51,7 @@ router.post('/reviews', function(req, res, next){
             data.Credentials.SessionToken)
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
         const params = {
-              "LanguageCode": "En",
+              "LanguageCode": "en",
               "TextList": [ ...req.body.reviews ]
            }
         console.log(params)
