@@ -56,10 +56,11 @@ router.post('/reviews', async function(req, res, next){
           fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
             if (err) res.status(500).send(err)
             else {
-              console.log(reviews)
+              reviewsJson = JSON.parse(reviews)
+              console.log(reviewsJson)
                 const params = {
                   "LanguageCode": "en",
-                  "TextList": [ ...reviews.reviews ]
+                  "TextList": [ ...reviewsJson.reviews ]
                 }
                 console.log(params)
                 let sentimet = await new Promise( (resolve, reject)=> {
