@@ -124,7 +124,7 @@ router.post('/reviews', async (req, res, next) => {
                             inputProductsIngredient.ingredients.sort(function(a,b){
                               return a.confident < b.confident ? 1 : -1;
                             });
-                            const maxLe = min(5, inputProductsIngredient.ingredients.length)
+                            const maxLe = Math.min(5, inputProductsIngredient.ingredients.length)
                             productDetail.ingredientsSort = inputProductsIngredient.ingredients.slice(0,maxLe)
                           }
                         }
