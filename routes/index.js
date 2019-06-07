@@ -4,11 +4,31 @@ var AWS = require('aws-sdk');
 const axios = require('axios');
 const fs = require('fs');
 const inputProducts = require('../data/inputProducts').products
+const inputProductsIngredients = require('../data/produts').products
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
 const reviweFileNames = ["negative", "positive"]
-const productsNames = ["Burger", "Cheese"]
+const productsNames = [
+  'SPICY CHICKEN PIZZA',
+'BBQ CHICKEN PIZZA',
+'ICE CREAM SANDWICHES',
+'PUMPKIN CHEESECAKE',
+'BLUEBERRY MUFFINS',
+'MILK CHOCOLATE FLAKES',
+'BROWNIES',
+'JELLY',
+'HONEY HAM',
+'TURKEY',
+'BEEF PATTIES',
+'GELATO',
+'PORK RUB',
+'BROCCOLI CUTS',
+'SHERBET',
+'SHRIMP',
+'COOKIE',
+'COFFEE',
+'CUPCAKES']
 router.get('/', async function(req, res, next) {
   let roleArn =await axios.get("http://169.254.169.254/latest/meta-data/iam/info")	    
   .then(response => response.data)	     
@@ -91,15 +111,28 @@ router.post('/reviews', async (req, res, next) => {
                         const sentiments = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList[0]
                         const productRating = (10 * sentiments.SentimentScore.Positive + 5 * sentiments.SentimentScore.Neutral + 5 * sentiments.SentimentScore.Mixed)/20
                         const productCount = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList.length
-                        conmpanyRating += productCount
-                        overallCount += 1
+                        conmpanyRating += productRating
+                        overallCount += productCount
                         const productDetail = {
+                          name: productsNames[reviewDetailsInner.productId],
                           rating: productRating,
-                          counts: productCount
+                          counts: productCount,
+                          ingredientsSort: []
+                        }
+                        for (const inputProductsIngredient of inputProductsIngredients) {
+                          if(inputProductsIngredient.name==productsNames[reviewDetailsInner.productId]){
+                            inputProductsIngredient.ingredients.sort(function(a,b){
+                              return a.confident < b.confident ? 1 : -1;
+                            });
+                            const maxLe = Math.min(5, inputProductsIngredient.ingredients.length)
+                            productDetail.ingredientsSort = inputProductsIngredient.ingredients.slice(0,maxLe)
+                            console.log(productDetail)
+                          }
                         }
                         productDetails.push(productDetail)
                    
                       }
+
                     console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
                   }
                   i++;
