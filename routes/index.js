@@ -4,7 +4,7 @@ var AWS = require('aws-sdk');
 
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
   let roleArn =await axios.get("http://169.254.169.254/latest/meta-data/iam/info")	    
   .then(response => response.data)	     
   .then(data => {	      
