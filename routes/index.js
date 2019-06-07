@@ -42,9 +42,9 @@ router.get('/reviews', function(req, res, next){
   });
 });
 
-router.post('/reviews', async function(req, res, next){
+router.post('/reviews', async (req, res, next) => {
   const responseJson = {}
-  await fs.readFile('./credencials.json', async function(err, data){
+  await fs.readFile('./credencials.json', async (err, data) => {
     if (err) console.log(err)
     else {
         data = JSON.parse(data)
@@ -55,7 +55,7 @@ router.post('/reviews', async function(req, res, next){
         res.send({
           "message": "Received"
         })
-        await new Promise( (resove) => {
+        await new Promise( async (resove) => {
         for (const reviewDetails of req.body.info) {
           await fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
             if (err) console.log(err)
