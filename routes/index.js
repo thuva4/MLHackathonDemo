@@ -52,6 +52,10 @@ router.post('/reviews', async function(req, res, next){
             data.Credentials.SecretAccessKey, 
             data.Credentials.SessionToken)
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
+        res.send({
+          "message": "Received"
+        })
+        await new Promise( (resove) => {
         for (const reviewDetails of req.body.info) {
           await fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
             if (err) console.log(err)
@@ -83,7 +87,9 @@ router.post('/reviews', async function(req, res, next){
             });
             console.log(responseJson)
         }
-        res.send(responseJson)
+        resove();
+      });
+      console.log(responseJson)
     }
 })
 });
