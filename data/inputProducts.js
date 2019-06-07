@@ -4,35 +4,59 @@ module.exports = {
             "name": "SPICY CHICKEN PIZZA"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "BBQ CHICKEN PIZZA"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "ICE CREAM SANDWICHES"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "PUMPKIN CHEESECAKE"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "BLUEBERRY MUFFINS"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "MILK CHOCOLATE FLAKES"
         },
 
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "BROWNIES"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "JELLY"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "TURKEY"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "BEEF PATTIES"
         },
         {
-            "name": "SPICY CHICKEN PIZZA"
+            "name": "GELATO"
+        },
+        {
+            "name": "PORK RUB"
+        },
+        {
+            "name": "JELLY"
+        },
+        {
+            "name": "BROCCOLI CUTS"
+        },
+        {
+            "name": "SHERBET"
+        },
+        {
+            "name": "SHRIMP"
+        },
+        {
+            "name": "COOKIE"
+        },
+        {
+            "name": "COFFEE"
+        },
+        {
+            "name": "CUPCAKES"
         }
     ]
 }
