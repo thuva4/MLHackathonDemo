@@ -56,6 +56,7 @@ router.post('/reviews', async function(req, res, next){
           fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
             if (err) res.status(500).send(err)
             else {
+              console.log(reviews)
                 const params = {
                   "LanguageCode": "en",
                   "TextList": [ ...reviews.reviews ]
