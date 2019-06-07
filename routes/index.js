@@ -77,18 +77,18 @@ router.get('/reviews', function(req, res, next){
 
 function generateStars(count) {
   let data = ''
-  for (let i=0; i< count; i++) {
+  for (let i=0; i< count * 10; i++) {
     data +='&#9733;'
   }
   let sysColor = 'yellow'
-  if (count > 3) {
+  if (count > 0.5) {
     sysColor = 'green'
-  } else if(count > 2) {
+  } else if(count > 0.25) {
     sysColor = 'yellow'
   } else {
     sysColor = 'red'
   }
-  return `<p style='color:${sysColor}'>` + data + `</p>`
+  return `<span style='color:${sysColor}'>` + data + `</span>`
 }
 
 router.post('/reviews', async (req, res, next) => {
