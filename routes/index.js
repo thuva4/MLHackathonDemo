@@ -8,12 +8,13 @@ AWS.config.update({region: 'us-east-1'});
 router.get('/', async function(req, res, next) {
   let roleArn =await axios.get("http://169.254.169.254/latest/meta-data/iam/info")	    
   .then(response => response.data)	     
-  .then(data => {	      
-   return data.InstanceProfileArn.replace("instance-profile", "role");;
+  .then(data => {
+    console.log(data)	      
+   return data.InstanceProfileArn.replace("instance-profile", "role");
 })
   console.log("Assuming role: "+roleArn);
   let sts = new AWS.STS() ;
-  sts.assumeRole({RoleArn: roleArn, RoleSessionName: 'SnapshotGraphs'}, function(err, data) {
+  sts.assumeRole({RoleArn: roleArn, RoleSessionName: 'comprehend'}, function(err, data) {
     if (err) res.status(500).send(err); // an error occurred
     else {           // successful response
         fs.writeFile('./credencials.json', JSON.stringify(data), function(err) {
