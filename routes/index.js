@@ -74,6 +74,8 @@ router.get('/reviews', function(req, res, next){
 });
 
 router.post('/reviews', async (req, res, next) => {
+  const { emailAddress, companyName } = req.body;
+
   const responseJson = {}
   await fs.readFile('./credencials.json', async (err, data) => {
     if (err) console.log(err)
@@ -148,8 +150,8 @@ router.post('/reviews', async (req, res, next) => {
 
                     // const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
 
-                    let htmlDATA = `<h1> <b>Company Name </b> : Sample Company </h1> <br/> 
-                        <h2><b> Company Ratings</b> : ${conmpanyRating/overallCount} </h2> <br/> <br/>`
+                    let htmlDATA = `<h1> <b>Company Name </b> : ${companyName} </h1> 
+                        <h2><b> Company Ratings</b> : ${conmpanyRating/overallCount} </h2> `
                     
                     let productsInfo = ''
                     console.log(productDetails)
@@ -177,7 +179,7 @@ router.post('/reviews', async (req, res, next) => {
                     htmlDATA += productsInfo
 
                     // await sendEmail('suthagar.14@cse.mrt.ac.lk', JSON.stringify({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}))
-                    await sendEmail('suthagar.14@cse.mrt.ac.lk', htmlDATA)
+                    await sendEmail(emailAddress, htmlDATA)
                   }
                   i++;
                   
