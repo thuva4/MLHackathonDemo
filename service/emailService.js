@@ -85,3 +85,51 @@ async function sendReportEmail(toAddresses) {
         }
     })
 }
+
+async function sendEmail(toAddresses, htmlBody) {
+    const emailParams = {
+      Destination: {
+        CcAddresses: [],
+        ToAddresses: toAddresses
+      },
+      Message: {
+        Body: {
+          Html: {
+            Charset: 'UTF-8',
+            Data: htmlBody
+          },
+          Text: {
+            Charset: 'UTF-8',
+            Data: 'No text data'
+          }
+        }
+      },
+      Subject: {
+        Charset: 'UTF-8',
+        Data: 'WeAreHereForHoodies: Your results are ready!!'
+      },
+      Source: fromAddress,
+      ReplyToAddresses: fromAddress
+    };
+  
+    return new Promise(resolve, reject => {
+      ses.sendEmail(emailParams, (err, data) => {
+        if (err) {
+          console.error(
+            `sendEmail: Email dispatch failed for emailAddress ${toAddresses}. Error ${JSON.stringify(
+              err
+            )}`
+          );
+          return reject(err);
+        }
+        console.info(`sendEmail: Email sent to ${toAddresses} - `, data);
+        return resolve('email sent');
+      });
+    });
+  }
+
+module.exports = {
+    createEmailTemplate,
+    sendEmail,
+    sendEmailUsingTemplate
+}
