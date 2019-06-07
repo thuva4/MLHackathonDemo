@@ -55,12 +55,12 @@ async function sendReportEmail(toAddresses) {
             const emailParams = {
                 Destination: {
                   CcAddresses: [],
-                  ToAddresses: toAddresses
+                  ToAddresses: [toAddresses]
                 },
                 Source: fromAddress,
                 Template: reportTemplateName,
                 TemplateData: templateData,
-                ReplyToAddresses: fromAddress
+                ReplyToAddresses: [fromAddress]
               };
 
               console.log("sendReportEmail: Start sending email")
