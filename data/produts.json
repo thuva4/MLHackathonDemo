@@ -1,0 +1,13 @@
+{
+    "products": [
+        {
+            "name": "SPICY CHICKEN PIZZA",
+            "ingredients" : [
+                {
+                    "name": "",
+                    "confidence": 10
+                }
+            ]
+        }
+    ]
+}

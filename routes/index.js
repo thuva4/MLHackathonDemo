@@ -3,7 +3,7 @@ var router = express.Router();
 var AWS = require('aws-sdk');
 const axios = require('axios');
 const fs = require('fs');
-
+const inputProducts = require('../data/inputProducts').products
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 router.get('/', async function(req, res, next) {
@@ -30,14 +30,18 @@ router.get('/', async function(req, res, next) {
 
 
 router.get('/products', function(req, res, next){
-  res.send({
-    'products': []
+  fs.readFile('./data/inputProducts.json', async function(err, data){
+    if (err) res.status(500).send(err)
+    else {
+        data = JSON.parse(data)
+        res.send(data);
+    }
   });
 });
 
 router.get('/reviews', function(req, res, next){
   res.send({
-    'fileList': []
+    'fileList': ['file1', 'file2', 'file3']
   });
 });
 
@@ -50,6 +54,7 @@ router.post('/reviews', async function(req, res, next){
             data.Credentials.SecretAccessKey, 
             data.Credentials.SessionToken)
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
+        // for (const reviewDetails of req.body.info) 
         const params = {
               "LanguageCode": "en",
               "TextList": [ ...req.body.reviews ]
