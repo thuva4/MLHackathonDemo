@@ -95,10 +95,9 @@ async function sendEmail(toAddresses, htmlBody) {
         }
         else {
             data = JSON.parse(data)
-            let tempCredentials = new AWS.Credentials(data.Credentials.AccessKeyId, 
-                data.Credentials.SecretAccessKey, 
-                data.Credentials.SessionToken)
-
+            let tempCredentials = new AWS.Credentials(
+              AKIAIGUMAUYWSJTR6BRQ, 
+              OviCHN5xc+CHoEmE08HFoUE5ImtyJQD5vWxJ9cqk)
             const ses = new AWS.SES({apiVersion: '2017-11-27', credentials:tempCredentials});
             
             const emailParams = {
