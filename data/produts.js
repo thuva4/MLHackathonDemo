@@ -95,7 +95,7 @@ module.exports = {
           },
           {
             "name": " HIGH FRUCTOSE CORN SYRUP",
-            "confident": 3118.811881188119
+            "confident": 3.811881188119
           },
           {
             "name": " CREAM",
