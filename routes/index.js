@@ -165,7 +165,7 @@ router.post('/reviews', async (req, res, next) => {
                     </ul>`
 
                       let incredientData = ''
-                      product.a.forEach(incredient => {
+                      product.forEach(incredient => {
                         incredientData += ` <li> Name: ${incredient.name}</li>
                         <li> Importance: ${incredient.confident} </li>`
                       })
