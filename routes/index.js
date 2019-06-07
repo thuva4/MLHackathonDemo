@@ -42,7 +42,7 @@ router.get('/reviews', function(req, res, next){
 });
 
 router.post('/reviews', async function(req, res, next){
-  fs.readFile('./credencials.json', function(err, data){
+  fs.readFile('./credencials.json', async function(err, data){
     if (err) res.status(500).send(err)
     else {
         data = JSON.parse(data)
