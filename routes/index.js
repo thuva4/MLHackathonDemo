@@ -56,13 +56,13 @@ router.post('/reviews', function(req, res, next){
            }
         console.log(params)
         const response = {}
-        comprehend.batchDetectSentiment(params, function (err, data) {
+        response.sentiment = comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
-              else     response.sentiment = data          
+              else  return data          
             });
-        comprehend.batchDetectKeyPhrases(params, function (err, data) {
+        response.keyPhrases = comprehend.batchDetectKeyPhrases(params, function (err, data) {
           if (err) res.status(400).send({ 'error': err}); 
-          else     response.keyPhrases = data          
+          else   return data          
         });
         res.send(response)
     }
