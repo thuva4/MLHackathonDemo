@@ -60,7 +60,7 @@ router.post('/reviews', function(req, res, next){
               if (err) res.status(400).send({ 'error': err}); 
               else     response.sentiment = data          
             });
-        comprehend.DetectKeyPhrases(params, function (err, data) {
+        comprehend.detectKeyPhrases(params, function (err, data) {
           if (err) res.status(400).send({ 'error': err}); 
           else     response.keyPhrases = data          
         });
