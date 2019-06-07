@@ -9,7 +9,17 @@ const { sendEmail } = require('../service/emailService')
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
-const reviweFileNames = ["negative", "positive"]
+const reviweFileNames = [
+"negative20",
+"negative50",
+"negative100",
+"neutral20",
+"neutral50",
+"neutral100",
+"positive20",
+"positive50",
+"positive100"
+]
 const productsNames = [
   'SPICY CHICKEN PIZZA',
 'BBQ CHICKEN PIZZA',
