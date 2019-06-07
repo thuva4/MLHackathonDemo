@@ -83,9 +83,16 @@ function generateStars(count) {
   let sysColor = 'yellow'
   if (count > 0.5) {
     sysColor = 'green'
-  } else if(count > 0.25) {
-    sysColor = 'yellow'
-  } else {
+  } else if(count > 0.3) {
+    sysColor = 'cyan'
+  } 
+  else if(count > 0.2) {
+    sysColor = 'blue'
+  }
+  else if(count > 0.1) {
+    sysColor = 'orange'
+  }
+  else {
     sysColor = 'red'
   }
   return `<span style='color:${sysColor}'>` + data + `</span>`
