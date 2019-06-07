@@ -69,7 +69,7 @@ router.get('/products', function(req, res, next){
 
 router.get('/reviews', function(req, res, next){
   res.send({
-    'fileList': ['file1', 'file2', 'file3']
+    'fileList': reviweFileNames
   });
 });
 
