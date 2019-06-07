@@ -135,7 +135,7 @@ router.post('/reviews', async (req, res, next) => {
                       }
 
                     console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
-                    await sendEmail('suthagar.14@cse.mrt.ac.lk', { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
+                    await sendEmail('suthagar.14@cse.mrt.ac.lk', JSON.stringify({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}))
                   }
                   i++;
                   
