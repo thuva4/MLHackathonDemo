@@ -45,7 +45,7 @@ router.get('/reviews', function(req, res, next){
 router.post('/reviews', async function(req, res, next){
   const responseJson = {}
   fs.readFile('./credencials.json', async function(err, data){
-    if (err) res.status(500).send(err)
+    if (err) console.log(err)
     else {
         data = JSON.parse(data)
         let tempCredentials = new AWS.Credentials(data.Credentials.AccessKeyId, 
@@ -54,7 +54,7 @@ router.post('/reviews', async function(req, res, next){
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
         for (const reviewDetails of req.body.info) {
           fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
-            if (err) res.status(500).send(err)
+            if (err) console.log(err)
             else {
               reviewsJson = JSON.parse(reviews)
               console.log(reviewsJson)
