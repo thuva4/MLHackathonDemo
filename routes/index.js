@@ -30,13 +30,7 @@ router.get('/', async function(req, res, next) {
 
 
 router.get('/products', function(req, res, next){
-  fs.readFile('./data/inputProducts.json', async function(err, data){
-    if (err) res.status(500).send(err)
-    else {
-        data = JSON.parse(data)
-        res.send(data);
-    }
-  });
+  res.send(inputProducts)
 });
 
 router.get('/reviews', function(req, res, next){
