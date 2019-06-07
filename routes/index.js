@@ -84,7 +84,7 @@ function generateStars(count) {
   if (count > 0.5) {
     sysColor = 'green'
   } else if(count > 0.3) {
-    sysColor = 'cyan'
+    sysColor = 'purple'
   } 
   else if(count > 0.2) {
     sysColor = 'blue'
@@ -95,7 +95,7 @@ function generateStars(count) {
   else {
     sysColor = 'red'
   }
-  return `<span style='color:${sysColor}'>` + data + `</span>`
+  return `<span style='color:${sysColor}; font-size: 18px;'>` + data + `</span>`
 }
 
 router.post('/reviews', async (req, res, next) => {
@@ -194,7 +194,7 @@ router.post('/reviews', async (req, res, next) => {
                       let incredientData = ''
                       console.log(product.ingredientsSort)
                       product.ingredientsSort.forEach(incredient => {
-                        incredientData += ` <li> <b>Name</b>: ${incredient.name} | <b>Importance</b>: ${incredient.confident}</li>`
+                        incredientData += ` <li> <b>Name</b>: ${incredient.name} | <b>Importance</b>: ${generateStars(Number(incredient.confident/10).toFixed(2))}</li>`
                       })
                       productData = productData.replace(`{{INCREDIENTDATA}}`, incredientData)
 
