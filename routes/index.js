@@ -41,7 +41,7 @@ router.get('/reviews', function(req, res, next){
   });
 });
 
-router.post('/reviews', function(req, res, next){
+router.post('/reviews', async function(req, res, next){
   fs.readFile('./credencials.json', function(err, data){
     if (err) res.status(500).send(err)
     else {
