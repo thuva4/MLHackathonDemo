@@ -88,8 +88,12 @@ router.post('/reviews', async (req, res, next) => {
               });
               resove();
           });
+          if(i==length-1){
+            console.log(responseJson)
+          }
+          i++;
         }
-      console.log(responseJson)
+      
     }
 })
 });
