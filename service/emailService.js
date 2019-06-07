@@ -3,7 +3,7 @@ var AWS = require('aws-sdk');
 const fs = require('fs');
 AWS.config.update({region: 'us-east-1', });
 
-const fromAddress = 'suthagar.14@cse.mrt.ac.lk'
+const fromAddress = 'tthuvarakan.14@cse.mrt.ac.lk'
 const reportTemplateName = 'SampleTemplate_1'
 
 async function createEmailTemplate() {  
