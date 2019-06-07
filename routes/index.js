@@ -67,6 +67,7 @@ router.post('/reviews', async function(req, res, next){
             else return data;           
           });
         });
+        console.log({sentimet, keyPhrases})
         res.send({sentimet, keyPhrases})
     }
 })
