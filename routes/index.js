@@ -10,15 +10,15 @@ AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
 const reviweFileNames = [
-"negative20",
-"negative50",
-"negative100",
-"neutral20",
-"neutral50",
-"neutral100",
+  "positive5",
+"positive10",
 "positive20",
-"positive50",
-"positive100"
+"neutral5",
+"neutral10",
+"neutral20",
+"negative5",
+"negative10",
+"negative20"
 ]
 const productsNames = [
   'SPICY CHICKEN PIZZA',
