@@ -4,6 +4,7 @@ var AWS = require('aws-sdk');
 const axios = require('axios');
 const fs = require('fs');
 const inputProducts = require('../data/inputProducts').products
+const inputProductsIngredients = require('../data/produts').products
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
@@ -113,8 +114,19 @@ router.post('/reviews', async (req, res, next) => {
                         conmpanyRating += productRating
                         overallCount += productCount
                         const productDetail = {
+                          name: productsNames[reviewDetailsInner.productId],
                           rating: productRating,
-                          counts: productCount
+                          counts: productCount,
+                          ingredientsSort: []
+                        }
+                        for (const inputProductsIngredient of inputProductsIngredients) {
+                          if(inputProductsIngredient.name==productsNames[reviewDetailsInner.productId]){
+                            inputProductsIngredient.ingredients.sort(function(a,b){
+                              return a.confident < b.confident ? 1 : -1;
+                            });
+                            const maxLe = min(5, inputProductsIngredient.ingredients.length)
+                            productDetail.ingredientsSort = inputProductsIngredient.ingredients.slice(0,maxLe)
+                          }
                         }
                         productDetails.push(productDetail)
                    
