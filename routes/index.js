@@ -80,12 +80,10 @@ router.post('/reviews', async (req, res, next) => {
                     else return resolve(data);           
                   });
                 });
-                console.log({sentimet, keyPhrases})
                 responseJson[productsNames[reviewDetails.productId]] = {sentimet, keyPhrases}
                 
               }
             });
-            console.log(responseJson)
         }
         resove();
       });
