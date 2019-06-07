@@ -148,7 +148,7 @@ router.post('/reviews', async (req, res, next) => {
 
                     // const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
 
-                    const htmlDATA = `<h1> Company Name : Sample Company </h1> <br/> 
+                    let htmlDATA = `<h1> Company Name : Sample Company </h1> <br/> 
                         <h2> Company Ratings : ${conmpanyRating/overallCount} </h2> <br/> <br/>`
                     
                     let productsInfo = ''
