@@ -75,16 +75,19 @@ router.post('/reviews', async (req, res, next) => {
                       });
                     }
                   );
-                  let keyPhrases = await new Promise( (resolve, reject)=> {
-                    comprehend.batchDetectKeyPhrases(params, function (err, data) {
-                      if (err) reject(err) 
-                      else return resolve(data);           
-                    });
-                  });
-                  responseJson[productsNames[reviewDetails.productId]] = {sentimet, keyPhrases}
+                  // let keyPhrases = await new Promise( (resolve, reject)=> {
+                  //   comprehend.batchDetectKeyPhrases(params, function (err, data) {
+                  //     if (err) reject(err) 
+                  //     else return resolve(data);           
+                  //   });
+                  // });
+                  responseJson[productsNames[reviewDetails.productId]] = {sentimet}
                   console.log(i, length)
                   if(i==length-1){
-                    console.log(responseJson)
+                    const conmpanyRating = 0
+                   for (const response of responseJson) {
+                        console.log(responseJson[response].SentimentScore)
+                   }
                   }
                   i++;
                   
