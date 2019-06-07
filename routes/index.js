@@ -87,7 +87,7 @@ router.post('/reviews', async (req, res, next) => {
                     const conmpanyRating = 0
                     for (const reviewDetailsInner of req.body.info) {
                       console.log(reviewDetailsInner)
-                        console.log(responseJson[productsNames[reviewDetails.productId]])
+                        console.log(responseJson[productsNames[reviewDetails.productId]].sentimet)
                    }
                   }
                   i++;
