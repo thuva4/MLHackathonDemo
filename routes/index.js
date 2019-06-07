@@ -5,6 +5,7 @@ const axios = require('axios');
 const fs = require('fs');
 const inputProducts = require('../data/inputProducts').products
 const inputProductsIngredients = require('../data/produts').products
+const { sendEmail } = require('../service/emailService')
 AWS.config.update({region: 'us-east-1'});
 /* GET home page. */
 
@@ -134,6 +135,7 @@ router.post('/reviews', async (req, res, next) => {
                       }
 
                     console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
+                    await sendEmail('tthuvarakan.14@cse.mrt.ac.lk', "Hello")
                   }
                   i++;
                   
