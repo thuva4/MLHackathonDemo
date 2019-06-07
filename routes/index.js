@@ -73,6 +73,24 @@ router.get('/reviews', function(req, res, next){
   });
 });
 
+
+
+function generateStars(count) {
+  let data = ''
+  for (let i=0; i< count; i++) {
+    data +='&#9733;'
+  }
+  let sysColor = 'yellow'
+  if (count > 3) {
+    sysColor = 'green'
+  } else if(count > 2) {
+    sysColor = 'yellow'
+  } else {
+    sysColor = 'red'
+  }
+  return `<p style='color:${sysColor}>` + data + `</p>`
+}
+
 router.post('/reviews', async (req, res, next) => {
   const { emailAddress, companyName } = req.body;
 
@@ -158,7 +176,7 @@ router.post('/reviews', async (req, res, next) => {
                     productDetails.forEach(product => {
                       let productData = `<h3> <b>Product Name</b> : ${product.name} </h3> 
                     <ul> 
-                      <li> <b>Rating</b> : ${Number(product.rating).toFixed(2)}</li>
+                      <li> <b>Rating</b> : ${generateStars(Number(product.rating).toFixed(2))}</li>
                       <li> <b>Hot selling count</b> : ${product.counts} </li>
                       <li> <b>Ingredients</b> </li>
                       <ul> 
