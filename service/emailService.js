@@ -104,7 +104,7 @@ async function sendEmail(toAddresses, htmlBody) {
             const emailParams = {
             Destination: {
                 CcAddresses: [],
-                ToAddresses: toAddresses
+                ToAddresses: [toAddresses]
             },
             Message: {
                 Body: {
@@ -123,7 +123,7 @@ async function sendEmail(toAddresses, htmlBody) {
                 Data: 'WeAreHereForHoodies: Your results are ready!!'
             },
             Source: fromAddress,
-            ReplyToAddresses: fromAddress
+            ReplyToAddresses: [fromAddress]
             };
         
             return new Promise((resolve, reject) => {
