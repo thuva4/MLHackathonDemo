@@ -86,14 +86,21 @@ router.post('/reviews', async (req, res, next) => {
                   if(i==length-1){
                     const conmpanyRating = 0
                     const overallCount = 0
+                    const productDetails  = []
                     for (const reviewDetailsInner of req.body.info) {
-                        const productRating = 0
-                        const productCount = 0
-                        const sentiments = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList
-                        for (const sentiment of sentiments) {
-                          console.log(sentiment)
+                        const sentiments = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList[0]
+                        const productRating = (10 * sentiments.SentimentScore.Positive + 5 * sentiments.SentimentScore.Neutral + 5 * sentiments.SentimentScore.Mixed)/20
+                        const productCount = responseJson[productsNames[reviewDetailsInner.productId]].sentimet.ResultList.length
+                        conmpanyRating += productCount
+                        overallCount += 1
+                        const productDetail = {
+                          rating: productRating,
+                          counts: productCount
                         }
-                   }
+                        productDetails.push(productDetail)
+                   
+                      }
+                    console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
                   }
                   i++;
                   
