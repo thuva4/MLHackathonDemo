@@ -148,17 +148,17 @@ router.post('/reviews', async (req, res, next) => {
 
                     // const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
 
-                    let htmlDATA = `<h1> Company Name : Sample Company </h1> <br/> 
-                        <h2> Company Ratings : ${conmpanyRating/overallCount} </h2> <br/> <br/>`
+                    let htmlDATA = `<h1> <b>Company Name </b> : Sample Company </h1> <br/> 
+                        <h2><b> Company Ratings</b> : ${conmpanyRating/overallCount} </h2> <br/> <br/>`
                     
                     let productsInfo = ''
                     console.log(productDetails)
                     productDetails.forEach(product => {
-                      let productData = `<h3> Product Name : ${product.name} </h3> 
+                      let productData = `<h3> <b>Product Name</b> : ${product.name} </h3> 
                     <ul> 
-                      <li> Rating : ${product.rating}</li>
-                      <li> Hot selling count : ${product.count} </li>
-                      <li> Ingredients </li>
+                      <li> <b>Rating</b> : ${product.rating}</li>
+                      <li> <b>Hot selling count</b> : ${product.counts} </li>
+                      <li> <b>Ingredients</b> </li>
                       <ul> 
                          {{INCREDIENTDATA}}
                       </ul>
@@ -167,8 +167,7 @@ router.post('/reviews', async (req, res, next) => {
                       let incredientData = ''
                       console.log(product.ingredientsSort)
                       product.ingredientsSort.forEach(incredient => {
-                        incredientData += ` <li> Name: ${incredient.name}</li>
-                        <li> Importance: ${incredient.confident} </li>`
+                        incredientData += ` <li> <b>Name</b>: ${incredient.name} | <b>Importance</b>: ${incredient.confident}</li>`
                       })
                       productData = productData.replace(`{{INCREDIENTDATA}}`, incredientData)
 
