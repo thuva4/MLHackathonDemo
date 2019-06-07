@@ -74,8 +74,10 @@ router.post('/reviews', async function(req, res, next){
                   });
                 });
                 responseJson[productsNames[reviewDetails.productId]] = {sentimet, keyPhrases}
+                
               }
             });
+            console.log(responseJson)
         }
         res.send(responseJson)
     }
