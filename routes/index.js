@@ -55,7 +55,7 @@ router.post('/reviews', function(req, res, next){
               "TextList": [ ...req.body.reviews ]
            }
         console.log(params)
-        comprehend.batchDetectDominantLanguage(params, function (err, data) {
+        comprehend.batchDetectSentiment(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
               else     res.send(data);           
             });
