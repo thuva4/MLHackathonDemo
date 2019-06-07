@@ -52,7 +52,7 @@ router.post('/reviews', function(req, res, next){
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
         const params = {
               "LanguageCode": "en",
-              "TextList": [ req.body ]
+              "TextList": [ ...req.body.reviews ]
            }
         comprehend.batchDetectDominantLanguage(params, function (err, data) {
               if (err) res.status(400).send({ 'error': err}); 
