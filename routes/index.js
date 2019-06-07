@@ -146,13 +146,14 @@ router.post('/reviews', async (req, res, next) => {
 
                     console.log({ conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails})
 
-                    const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
+                    // const response = { conmpanyRating: conmpanyRating/overallCount, overallCount, productDetails}
 
                     const htmlDATA = `<h1> Company Name : Sample Company </h1> <br/> 
-                        <h2> Company Ratings : ${response.conmpanyRating} </h2> <br/> <br/>`
+                        <h2> Company Ratings : ${conmpanyRating/overallCount} </h2> <br/> <br/>`
                     
                     let productsInfo = ''
-                    response.productDetails.forEach(product => {
+                    console.log(productDetails)
+                    productDetails.forEach(product => {
                       let productData = `<h3> Product Name : ${product.name} </h3> 
                     <ul> 
                       <li> Rating : ${product.rating}</li>
