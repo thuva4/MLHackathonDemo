@@ -88,7 +88,7 @@ function generateStars(count) {
   } else {
     sysColor = 'red'
   }
-  return `<p style='color:${sysColor}>` + data + `</p>`
+  return `<p style='color:${sysColor}'>` + data + `</p>`
 }
 
 router.post('/reviews', async (req, res, next) => {
