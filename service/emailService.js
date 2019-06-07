@@ -131,5 +131,5 @@ async function sendEmail(toAddresses, htmlBody) {
 module.exports = {
     createEmailTemplate,
     sendEmail,
-    sendEmailUsingTemplate
+    sendReportEmail
 }
