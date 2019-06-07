@@ -53,7 +53,7 @@ router.post('/reviews', async function(req, res, next){
             data.Credentials.SessionToken)
         const comprehend = new AWS.Comprehend({apiVersion: '2017-11-27', credentials:tempCredentials});
         for (const reviewDetails of req.body.info) {
-          fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
+          await fs.readFile(`./reviews/${reviweFileNames[reviewDetails.reviewId]}.json`, async function(err, reviews){
             if (err) console.log(err)
             else {
               reviewsJson = JSON.parse(reviews)
